@@ -1,26 +1,26 @@
 import React, { useState } from 'react'
-import InputForm from './InputForm'
+import InputForm from '../shared/InputForm'
 
-const Form = (props) => {
+const SearchForm = (props) => {
 
-    const {inputs, onSubmit, initialState} = props
+    const {inputs, onSubmit} = props
 
-    const[form, setForm] = useState(initialState)
+    const[userID, setUserID] = useState('')
 
     const handleChange = e => {
         const {value} = e.target
-        setForm(value);
+        setUserID(value);
     }
     
     const handleSubmit = e => {
-        onSubmit(e, form)
+        onSubmit(e, userID)
     }
 
     return (
         <form onSubmit={e => handleSubmit(e)}>
             {inputs.map(({type, name, id, labelText, required}) => (
                 <InputForm
-                    onChange={handleChange}
+                    handleChange={handleChange}
                     key={name}
                     type={type}
                     id={id}
@@ -33,4 +33,4 @@ const Form = (props) => {
     )
 }
 
-export default Form
+export default SearchForm

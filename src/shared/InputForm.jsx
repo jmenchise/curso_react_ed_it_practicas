@@ -8,7 +8,7 @@ const InputForm = (props) => {
         id,
         labelText,
         required,
-        onChange
+        handleChange
     } = props
 
 
@@ -16,14 +16,13 @@ const InputForm = (props) => {
         <div className="mb-3">
             <label htmlFor={name} className="form-label">{labelText}</label>
             <input 
-                onChange={onChange}
+                onChange={handleChange}
                 name={name} 
                 type={type}
                 className="form-control"
                 id={id}
                 required={required}
                 aria-describedby="emailHelp" 
-                
             />
         </div>
     )

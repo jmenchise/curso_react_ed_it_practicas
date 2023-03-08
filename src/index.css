@@ -3,3 +3,7 @@ body{
     width: 80%;
     max-width: 1800px;
 }
+
+h2{
+    margin-top: 2em;
+}

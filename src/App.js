@@ -1,11 +1,11 @@
-import ClientsContainer from "./ClientsContainer";
+import UserContainer from "./layouts/UserContainer";
 import './index.css'
 
 function App() {
   
   return (
     <div className="App">
-      <ClientsContainer/>
+      <UserContainer/>
     </div>
   );
 }
